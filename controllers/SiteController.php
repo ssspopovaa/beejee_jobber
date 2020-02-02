@@ -10,8 +10,9 @@ class SiteController
      */
     public function actionIndex($page = 1)
     {
+        
         // Set sorting by default by name down if not set
-        if(!$_SESSION['sort']) {
+        if(!isset($_SESSION['sort'])) {
             $_SESSION['sort'] = 1;
         };
         
