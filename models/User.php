@@ -95,4 +95,16 @@ class User
         }
         return false;
     }
+    
+    /**
+     * @param string $password 
+     * @return boolean 
+     */
+    public static function checkPassword($password)
+    {
+        if (strlen($password) >= 3) {
+            return true;
+        }
+        return false;
+    }
 }
